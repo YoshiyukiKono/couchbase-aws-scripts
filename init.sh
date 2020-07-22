@@ -40,4 +40,4 @@ function setup_chrony_w_amazon_time_sync() {
   chronyc sourcestats
 }
 
-setup_chrony_w_amazon_time_sync
+#setup_chrony_w_amazon_time_sync
