@@ -1,7 +1,7 @@
 #! /bin/bash
 
 # yum update
-yum -y update
+#yum -y update
 
 # Auto Shutdown
 #echo "0 22 * * * root yum -y update && /sbin/shutdown -h now" >> /etc/crontab
