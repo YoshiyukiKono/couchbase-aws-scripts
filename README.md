@@ -47,17 +47,40 @@ TAG_OWNER=%OWNER_AS_YOU_LIKE%
 INSTANCE_NAME=%INSTANCE_NAME_AS_YOU_LIKE%
 ```
 
-## Run
+## Create EC2 Instance(s)
 
 Execute `cluster_couchbase.sh` on your local environment.
 ```
 $ cluster_couchbase.sh 
 ```
+*If you want to create multiple instances please edit the script accordingly*
 
 Upon successful completion of the above script, you would find a new instance is created on AWS Web Console.
 
+
+## Preparation for Remote Exec
+
+### Passwordless Login
+When you execute the above script, you would find `passwordless_<INSTANCE_NAME_AS_YOU_LIKE>_<DATA_TIME>.sh` is generated locally.
+You can use this script to enable passwordless (no need to use PEM file) login.
+
+### SSH Config Update
+You can renewal your ssh config as follows based on the running EC2 instances, which have a name defined by the naming convention used in the scripts.
+```
+$ renew_ssh_config.sh
+```
+## Install Couchbase Server
+
+You can run the script to install Couchbase Server remotely as follows.
+
+```
+$ exec_on_cb_hosts.sh cb_install.sh
+```
+
+*If you want to execute the script used as an argument, `cb_install.sh`, on multiple instances please edit the `exec_on_~.sh` accordingly*
+
 ## Misc
 
-When you execute the above script, you would find `passwordless_<INSTANCE_NAME_AS_YOU_LIKE>_<DATA_TIME>.sh` is generated locally.
-You can use this script to enable passwordless (no need to use PEM file) login. You don't have to mind it necessarily for an instance.
-This is a "sugar coating" function for when dealing with multiple instances in a script.
+There are some scripts to configure OS but it is not necessarily needed for demo environment.
+
+
