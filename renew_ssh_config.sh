@@ -4,8 +4,7 @@ DATE=`LANG=c date +%y%m%d_%H%M`
 
 PATH_CONFIG=~/.ssh/
 FILE_CONFIG=config
-OS_USER=ec2-user
-#OS_USER=centos
+
 
 mv ${PATH_CONFIG}${FILE_CONFIG}{,.$DATE.bak}
 
