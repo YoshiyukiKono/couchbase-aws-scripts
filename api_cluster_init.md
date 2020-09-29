@@ -40,6 +40,8 @@ curl -u Administrator:password -v -X POST http://[localhost]:8091/pools/default/
   -d name=[bucket-name]
 ```
 
+https://docs.couchbase.com/server/current/analytics/rest-links.html
+
 ```
 
 # Initialize the cluster
