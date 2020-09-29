@@ -13,7 +13,7 @@ $ couchbase-cli cluster-init --cluster localhost --cluster-username Administrato
 SUCCESS: Cluster initialized
 ```
  
-*Please note that the parameter of the option -c/--cluster is corresponding to the host that you send your request via the command.
+*Please note that the parameter of the option -c/--cluster is corresponding to the host that you send your request via the command.*
 
 Please refer to our documentation for details (I cited some sentences).
 
